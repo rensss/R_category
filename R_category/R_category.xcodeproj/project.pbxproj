@@ -26,6 +26,7 @@
 		1A1A2C451F7A5FDE00AB4756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1A2C471F7A5FDE00AB4756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1A2C481F7A5FDE00AB4756 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A1A2C511F7A664F00AB4756 /* R_categorys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = R_categorys.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 			children = (
 				1A1A2C381F7A5FDE00AB4756 /* R_category */,
 				1A1A2C371F7A5FDE00AB4756 /* Products */,
+				1A1A2C4F1F7A660700AB4756 /* category_Class */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +71,15 @@
 				1A1A2C481F7A5FDE00AB4756 /* main.m */,
 			);
 			path = R_category;
+			sourceTree = "<group>";
+		};
+		1A1A2C4F1F7A660700AB4756 /* category_Class */ = {
+			isa = PBXGroup;
+			children = (
+				1A1A2C511F7A664F00AB4756 /* R_categorys.h */,
+			);
+			name = category_Class;
+			path = ../category_Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +108,7 @@
 		1A1A2C2E1F7A5FDE00AB4756 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = R_;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = rzk;
 				TargetAttributes = {
