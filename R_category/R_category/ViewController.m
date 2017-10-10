@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "R_categorys.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIView *newView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
+    newView.centerX = self.view.width / 2;
+    newView.backgroundColor = [UIColor colorWithRandom];
+    [self.view addSubview:newView];
 }
 
 

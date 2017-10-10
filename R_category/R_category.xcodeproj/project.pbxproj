@@ -13,6 +13,13 @@
 		1A1A2C431F7A5FDE00AB4756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A2C421F7A5FDE00AB4756 /* Assets.xcassets */; };
 		1A1A2C461F7A5FDE00AB4756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A2C441F7A5FDE00AB4756 /* LaunchScreen.storyboard */; };
 		1A1A2C491F7A5FDE00AB4756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C481F7A5FDE00AB4756 /* main.m */; };
+		1A37B38C1F8CC891005FA448 /* UIView+R_Categroy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B3891F8CBB20005FA448 /* UIView+R_Categroy.m */; };
+		1A37B38F1F8CC8E3005FA448 /* UIColor+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B38E1F8CC8E3005FA448 /* UIColor+R_Category.m */; };
+		1A37B3921F8CCA95005FA448 /* UIImage+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B3911F8CCA95005FA448 /* UIImage+R_Category.m */; };
+		1A37B3951F8CCAB5005FA448 /* UILabel+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B3941F8CCAB5005FA448 /* UILabel+R_Category.m */; };
+		1A37B3981F8CCAD2005FA448 /* NSString+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B3971F8CCAD2005FA448 /* NSString+R_Category.m */; };
+		1A37B39B1F8CCAED005FA448 /* UIAlertController+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B39A1F8CCAED005FA448 /* UIAlertController+R_Category.m */; };
+		1A37B39E1F8CCB8E005FA448 /* UIButton+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A37B39D1F8CCB8E005FA448 /* UIButton+R_Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,20 @@
 		1A1A2C471F7A5FDE00AB4756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1A2C481F7A5FDE00AB4756 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A1A2C511F7A664F00AB4756 /* R_categorys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = R_categorys.h; sourceTree = "<group>"; };
+		1A37B3881F8CBB20005FA448 /* UIView+R_Categroy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+R_Categroy.h"; sourceTree = "<group>"; };
+		1A37B3891F8CBB20005FA448 /* UIView+R_Categroy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+R_Categroy.m"; sourceTree = "<group>"; };
+		1A37B38D1F8CC8E3005FA448 /* UIColor+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+R_Category.h"; sourceTree = "<group>"; };
+		1A37B38E1F8CC8E3005FA448 /* UIColor+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+R_Category.m"; sourceTree = "<group>"; };
+		1A37B3901F8CCA95005FA448 /* UIImage+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+R_Category.h"; sourceTree = "<group>"; };
+		1A37B3911F8CCA95005FA448 /* UIImage+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+R_Category.m"; sourceTree = "<group>"; };
+		1A37B3931F8CCAB5005FA448 /* UILabel+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+R_Category.h"; sourceTree = "<group>"; };
+		1A37B3941F8CCAB5005FA448 /* UILabel+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+R_Category.m"; sourceTree = "<group>"; };
+		1A37B3961F8CCAD2005FA448 /* NSString+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+R_Category.h"; sourceTree = "<group>"; };
+		1A37B3971F8CCAD2005FA448 /* NSString+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+R_Category.m"; sourceTree = "<group>"; };
+		1A37B3991F8CCAED005FA448 /* UIAlertController+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+R_Category.h"; sourceTree = "<group>"; };
+		1A37B39A1F8CCAED005FA448 /* UIAlertController+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+R_Category.m"; sourceTree = "<group>"; };
+		1A37B39C1F8CCB8E005FA448 /* UIButton+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+R_Category.h"; sourceTree = "<group>"; };
+		1A37B39D1F8CCB8E005FA448 /* UIButton+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+R_Category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +98,20 @@
 			isa = PBXGroup;
 			children = (
 				1A1A2C511F7A664F00AB4756 /* R_categorys.h */,
+				1A37B3881F8CBB20005FA448 /* UIView+R_Categroy.h */,
+				1A37B3891F8CBB20005FA448 /* UIView+R_Categroy.m */,
+				1A37B38D1F8CC8E3005FA448 /* UIColor+R_Category.h */,
+				1A37B38E1F8CC8E3005FA448 /* UIColor+R_Category.m */,
+				1A37B3901F8CCA95005FA448 /* UIImage+R_Category.h */,
+				1A37B3911F8CCA95005FA448 /* UIImage+R_Category.m */,
+				1A37B3931F8CCAB5005FA448 /* UILabel+R_Category.h */,
+				1A37B3941F8CCAB5005FA448 /* UILabel+R_Category.m */,
+				1A37B3961F8CCAD2005FA448 /* NSString+R_Category.h */,
+				1A37B3971F8CCAD2005FA448 /* NSString+R_Category.m */,
+				1A37B3991F8CCAED005FA448 /* UIAlertController+R_Category.h */,
+				1A37B39A1F8CCAED005FA448 /* UIAlertController+R_Category.m */,
+				1A37B39C1F8CCB8E005FA448 /* UIButton+R_Category.h */,
+				1A37B39D1F8CCB8E005FA448 /* UIButton+R_Category.m */,
 			);
 			name = category_Class;
 			path = ../category_Class;
@@ -154,9 +189,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A37B39B1F8CCAED005FA448 /* UIAlertController+R_Category.m in Sources */,
+				1A37B38C1F8CC891005FA448 /* UIView+R_Categroy.m in Sources */,
 				1A1A2C3E1F7A5FDE00AB4756 /* ViewController.m in Sources */,
+				1A37B3981F8CCAD2005FA448 /* NSString+R_Category.m in Sources */,
+				1A37B39E1F8CCB8E005FA448 /* UIButton+R_Category.m in Sources */,
 				1A1A2C491F7A5FDE00AB4756 /* main.m in Sources */,
 				1A1A2C3B1F7A5FDE00AB4756 /* AppDelegate.m in Sources */,
+				1A37B3921F8CCA95005FA448 /* UIImage+R_Category.m in Sources */,
+				1A37B3951F8CCAB5005FA448 /* UILabel+R_Category.m in Sources */,
+				1A37B38F1F8CC8E3005FA448 /* UIColor+R_Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
