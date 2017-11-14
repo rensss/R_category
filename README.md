@@ -6,7 +6,7 @@
 #### pod导入
 
 ```
-pod "R_category", "~> 0.0.2"
+pod 'R_category'
 ```
 
 #### 使用
