@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103E7A57201B1BC00053AFFF /* UITableView+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */; };
 		10DC2A6F1FBAA5EB004640F8 /* UIViewController+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */; };
 		1A1A2C3B1F7A5FDE00AB4756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3A1F7A5FDE00AB4756 /* AppDelegate.m */; };
 		1A1A2C3E1F7A5FDE00AB4756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3D1F7A5FDE00AB4756 /* ViewController.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103E7A55201B1BC00053AFFF /* UITableView+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+R_Category.h"; sourceTree = "<group>"; };
+		103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+R_Category.m"; sourceTree = "<group>"; };
 		10DC2A6D1FBAA5EB004640F8 /* UIViewController+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+R_Category.h"; sourceTree = "<group>"; };
 		10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+R_Category.m"; sourceTree = "<group>"; };
 		1A1A2C361F7A5FDE00AB4756 /* R_category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R_category.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +120,8 @@
 				1A37B39D1F8CCB8E005FA448 /* UIButton+R_Category.m */,
 				10DC2A6D1FBAA5EB004640F8 /* UIViewController+R_Category.h */,
 				10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */,
+				103E7A55201B1BC00053AFFF /* UITableView+R_Category.h */,
+				103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */,
 			);
 			name = category_Class;
 			path = ../category_Class;
@@ -196,6 +201,7 @@
 			files = (
 				1A37B39B1F8CCAED005FA448 /* UIAlertController+R_Category.m in Sources */,
 				10DC2A6F1FBAA5EB004640F8 /* UIViewController+R_Category.m in Sources */,
+				103E7A57201B1BC00053AFFF /* UITableView+R_Category.m in Sources */,
 				1A37B38C1F8CC891005FA448 /* UIView+R_Categroy.m in Sources */,
 				1A1A2C3E1F7A5FDE00AB4756 /* ViewController.m in Sources */,
 				1A37B3981F8CCAD2005FA448 /* NSString+R_Category.m in Sources */,
