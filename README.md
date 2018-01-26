@@ -1,7 +1,7 @@
 # R_category
 ### 扩展分类
 
-包含 NSString,UIView,UILabel,UIAlertController,UIButton,UIColor,UIImage的相关扩展
+包含 NSString,UIView,UILabel,UIAlertController,UIButton,UIColor,UIImage,UITableView的相关扩展
 
 #### pod导入
 
