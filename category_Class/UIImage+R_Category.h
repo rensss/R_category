@@ -19,4 +19,12 @@
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
 
+
+/**
+ *  获取启动图
+ *
+ *  @return 启动图
+ */
++ (UIImage *)getTheLaunchImage;
+
 @end
