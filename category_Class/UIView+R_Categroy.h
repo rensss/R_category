@@ -57,4 +57,17 @@
  */
 - (UIViewController *)viewController;
 
+
+/**
+ 旋转
+ @param duration 一圈时长
+ @param clockwise 是否顺时针
+ */
+- (void)startRotating:(double)duration :(BOOL)clockwise;
+
+/**
+ 停止旋转
+ */
+- (void)stopRotating;
+
 @end
