@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		103E7A57201B1BC00053AFFF /* UITableView+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */; };
+		1054A34621841342009598C2 /* UIDevice+R_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1054A34521841342009598C2 /* UIDevice+R_category.m */; };
 		10DC2A6F1FBAA5EB004640F8 /* UIViewController+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */; };
 		1A1A2C3B1F7A5FDE00AB4756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3A1F7A5FDE00AB4756 /* AppDelegate.m */; };
 		1A1A2C3E1F7A5FDE00AB4756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3D1F7A5FDE00AB4756 /* ViewController.m */; };
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		103E7A55201B1BC00053AFFF /* UITableView+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+R_Category.h"; sourceTree = "<group>"; };
 		103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+R_Category.m"; sourceTree = "<group>"; };
+		1054A34421841342009598C2 /* UIDevice+R_category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+R_category.h"; sourceTree = "<group>"; };
+		1054A34521841342009598C2 /* UIDevice+R_category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+R_category.m"; sourceTree = "<group>"; };
 		10DC2A6D1FBAA5EB004640F8 /* UIViewController+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+R_Category.h"; sourceTree = "<group>"; };
 		10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+R_Category.m"; sourceTree = "<group>"; };
 		1A1A2C361F7A5FDE00AB4756 /* R_category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R_category.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,8 @@
 				10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */,
 				103E7A55201B1BC00053AFFF /* UITableView+R_Category.h */,
 				103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */,
+				1054A34421841342009598C2 /* UIDevice+R_category.h */,
+				1054A34521841342009598C2 /* UIDevice+R_category.m */,
 			);
 			name = category_Class;
 			path = ../category_Class;
@@ -156,7 +161,7 @@
 				TargetAttributes = {
 					1A1A2C351F7A5FDE00AB4756 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -201,6 +206,7 @@
 				1A37B38C1F8CC891005FA448 /* UIView+R_Categroy.m in Sources */,
 				1A1A2C3E1F7A5FDE00AB4756 /* ViewController.m in Sources */,
 				1A37B3981F8CCAD2005FA448 /* NSString+R_Category.m in Sources */,
+				1054A34621841342009598C2 /* UIDevice+R_category.m in Sources */,
 				1A37B39E1F8CCB8E005FA448 /* UIButton+R_Category.m in Sources */,
 				1A1A2C491F7A5FDE00AB4756 /* main.m in Sources */,
 				1A1A2C3B1F7A5FDE00AB4756 /* AppDelegate.m in Sources */,
@@ -333,12 +339,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D7DHB5C7U3;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = R_category/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Micsoft.R-category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -348,12 +355,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D7DHB5C7U3;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = R_category/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Micsoft.R-category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
