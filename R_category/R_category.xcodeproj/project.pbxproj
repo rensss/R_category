@@ -10,6 +10,7 @@
 		103E7A57201B1BC00053AFFF /* UITableView+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 103E7A56201B1BC00053AFFF /* UITableView+R_Category.m */; };
 		1054A34621841342009598C2 /* UIDevice+R_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1054A34521841342009598C2 /* UIDevice+R_category.m */; };
 		10DC2A6F1FBAA5EB004640F8 /* UIViewController+R_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */; };
+		1A051CB8228960890060CF84 /* R_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A051CB7228960890060CF84 /* R_TableViewController.m */; };
 		1A1A2C3B1F7A5FDE00AB4756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3A1F7A5FDE00AB4756 /* AppDelegate.m */; };
 		1A1A2C3E1F7A5FDE00AB4756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3D1F7A5FDE00AB4756 /* ViewController.m */; };
 		1A1A2C411F7A5FDE00AB4756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1A2C3F1F7A5FDE00AB4756 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 		1054A34521841342009598C2 /* UIDevice+R_category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+R_category.m"; sourceTree = "<group>"; };
 		10DC2A6D1FBAA5EB004640F8 /* UIViewController+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+R_Category.h"; sourceTree = "<group>"; };
 		10DC2A6E1FBAA5EB004640F8 /* UIViewController+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+R_Category.m"; sourceTree = "<group>"; };
+		1A051CB6228960890060CF84 /* R_TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = R_TableViewController.h; sourceTree = "<group>"; };
+		1A051CB7228960890060CF84 /* R_TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = R_TableViewController.m; sourceTree = "<group>"; };
 		1A1A2C361F7A5FDE00AB4756 /* R_category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R_category.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1A2C391F7A5FDE00AB4756 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A1A2C3A1F7A5FDE00AB4756 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		1A37B39A1F8CCAED005FA448 /* UIAlertController+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+R_Category.m"; sourceTree = "<group>"; };
 		1A37B39C1F8CCB8E005FA448 /* UIButton+R_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+R_Category.h"; sourceTree = "<group>"; };
 		1A37B39D1F8CCB8E005FA448 /* UIButton+R_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+R_Category.m"; sourceTree = "<group>"; };
+		1ABE4DB82289663C00A6F44E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,9 @@
 				1A1A2C3A1F7A5FDE00AB4756 /* AppDelegate.m */,
 				1A1A2C3C1F7A5FDE00AB4756 /* ViewController.h */,
 				1A1A2C3D1F7A5FDE00AB4756 /* ViewController.m */,
+				1A051CB6228960890060CF84 /* R_TableViewController.h */,
+				1A051CB7228960890060CF84 /* R_TableViewController.m */,
+				1ABE4DB82289663C00A6F44E /* PrefixHeader.pch */,
 				1A1A2C3F1F7A5FDE00AB4756 /* Main.storyboard */,
 				1A1A2C421F7A5FDE00AB4756 /* Assets.xcassets */,
 				1A1A2C471F7A5FDE00AB4756 /* Info.plist */,
@@ -210,6 +217,7 @@
 				1A37B39E1F8CCB8E005FA448 /* UIButton+R_Category.m in Sources */,
 				1A1A2C491F7A5FDE00AB4756 /* main.m in Sources */,
 				1A1A2C3B1F7A5FDE00AB4756 /* AppDelegate.m in Sources */,
+				1A051CB8228960890060CF84 /* R_TableViewController.m in Sources */,
 				1A37B3921F8CCA95005FA448 /* UIImage+R_Category.m in Sources */,
 				1A37B3951F8CCAB5005FA448 /* UILabel+R_Category.m in Sources */,
 				1A37B38F1F8CC8E3005FA448 /* UIColor+R_Category.m in Sources */,
@@ -341,6 +349,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = R_category/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Micsoft.R-category";
@@ -357,6 +366,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = R_category/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Micsoft.R-category";

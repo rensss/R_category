@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  R_category
+//
+//  Created by Rzk on 2019/5/13.
+//  Copyright © 2019 rzk. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "../../category_Class/R_categorys.h"
+
+#endif /* PrefixHeader_pch */

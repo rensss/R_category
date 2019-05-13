@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "R_categorys.h"
+#import "R_TableViewController.h"
 
 @interface ViewController ()
 
@@ -36,12 +36,25 @@
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [newView addSubview:button];
     
+    UIButton *guideBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
+    guideBtn.y = newView.maxY + 30;
+    guideBtn.centerX = newView.centerX;
+    [guideBtn setTitle:@"跳转" forState:UIControlStateNormal];
+    [guideBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [guideBtn addTarget:self action:@selector(guideClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:guideBtn];
 }
 
 #pragma mark - 点击事件
 - (void)buttonClick:(UIButton *)button {
     UIImageView *imageView = (UIImageView *)[self.view viewWithTag:1000];
     imageView.hidden = !imageView.hidden;
+}
+
+- (void)guideClick {
+    R_TableViewController *tableViewVC = [[R_TableViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tableViewVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
