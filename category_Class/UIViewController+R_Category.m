@@ -14,18 +14,15 @@
     return [UIApplication sharedApplication].statusBarFrame.size.height;
 }
 
-- (CGFloat)navigationBarHeight
-{
+- (CGFloat)navigationBarHeight {
     return self.navigationController.navigationBar.frame.size.height;
 }
 
-- (CGFloat)tabBarHeight
-{
+- (CGFloat)tabBarHeight {
     return self.tabBarController.tabBar.frame.size.height;
 }
 
-- (UIEdgeInsets)safeAreaInsets
-{
+- (UIEdgeInsets)safeAreaInsets {
     if (@available(iOS 11.0, *)) {
         return [UIApplication sharedApplication].keyWindow.safeAreaInsets;
     } else {

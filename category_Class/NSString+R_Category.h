@@ -62,25 +62,28 @@
 - (NSString *)md5Encrypt;
 
 #pragma mark - 计算文字大小
-- (CGSize)sizeWithMaxSize:(CGSize) maxSize andFont:(UIFont *) font;
+/**
+ 根据尺寸求文字高低
+ @param maxSize 最大尺寸(限高/限宽)
+ @param font 字体
+ @return 尺寸
+ */
+- (CGSize)sizeWithMaxSize:(CGSize)maxSize andFont:(UIFont *)font;
 
 /**
- *  匹配字符串中得链接  并返回链接字符串数组
- *
- *  @return 返回一个标准url格式的数组
+ 匹配字符串中得链接  并返回链接字符串数组
+ @return 返回一个标准url格式的数组
  */
 - (NSArray *)matchLinks;
 
 /**
- *  格式化时间字符串
- *
- *  @return 间隔
+ 格式化时间字符串
+ @return 间隔
  */
 - (NSString *)formatterDateString;
 
 /**
  验证生份证号码是否符合规则
- 
  @return yes or no
  */
 - (BOOL)judgeIdentityStringValid;

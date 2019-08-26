@@ -13,42 +13,15 @@
  */
 @interface UIView (R_Categroy)
 
-/**
- *  UIView的x
- */
-@property (nonatomic, assign) CGFloat x;
-/**
- *  UIView的y
- */
-@property (nonatomic, assign) CGFloat y;
-/**
- *  UIView最大的x
- */
-@property (nonatomic, assign) CGFloat maxX;
-/**
- *  UIView最大的y
- */
-@property (nonatomic, assign) CGFloat maxY;
-/**
- *  UIView中心x
- */
-@property (nonatomic, assign) CGFloat centerX;
-/**
- *  UIView中心y
- */
-@property (nonatomic, assign) CGFloat centerY;
-/**
- *  UIView的宽
- */
-@property (nonatomic, assign) CGFloat width;
-/**
- *  UIView的高
- */
-@property (nonatomic, assign) CGFloat height;
-/**
- *  UIView的尺寸
- */
-@property (nonatomic, assign) CGSize size;
+@property (nonatomic, assign) CGFloat x; /**< UIView的x*/
+@property (nonatomic, assign) CGFloat y; /**< UIView的y*/
+@property (nonatomic, assign) CGFloat maxX; /**< UIView最大的x*/
+@property (nonatomic, assign) CGFloat maxY; /**< UIView最大的y*/
+@property (nonatomic, assign) CGFloat centerX; /**< UIView中心x*/
+@property (nonatomic, assign) CGFloat centerY; /**< UIView中心y*/
+@property (nonatomic, assign) CGFloat width; /**< UIView的宽*/
+@property (nonatomic, assign) CGFloat height; /**< UIView的高*/
+@property (nonatomic, assign) CGSize size; /**< UIView的尺寸*/
 
 /**
  *  当前view的controller
@@ -57,13 +30,12 @@
  */
 - (UIViewController *)viewController;
 
-
 /**
  旋转
  @param duration 一圈时长
  @param clockwise 是否顺时针
  */
-- (void)startRotating:(double)duration :(BOOL)clockwise;
+- (void)startRotating:(double)duration withClockwise:(BOOL)clockwise;
 
 /**
  停止旋转

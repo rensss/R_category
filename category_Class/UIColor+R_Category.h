@@ -35,6 +35,16 @@
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 
 /**
+ *  根据十六进制字符串生成一个UIColor
+ *
+ *  @param hexString 十六进制字符串
+ *  @param alpha a value from 0.0 to 1.0. 零到一
+ 
+ *  @return UIColor
+ */
++ (UIColor *)colorWithHexString:(NSString *)hexString withAlpha:(CGFloat)alpha;
+
+/**
  *  根据红绿蓝三色的(0~255)值生成一个UIColor
  *
  *  @param red   红 0~255

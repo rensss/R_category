@@ -12,8 +12,7 @@
 @implementation UITableView (R_Category)
 
 #pragma mark - 交换方法
-+(void)load
-{
++ (void)load {
     //交换reloadData方法
     method_exchangeImplementations(class_getInstanceMethod(self, @selector(reloadData)), class_getInstanceMethod(self, @selector(r_reloadData)));
     
@@ -34,41 +33,35 @@
 }
 
 //reloadData
-- (void)r_reloadData
-{
+- (void)r_reloadData {
     [self r_reloadData];
     
     [self reloadEmptyImageView];
 }
 
 //insert
-- (void)r_insertSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation
-{
+- (void)r_insertSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation {
     [self r_insertSections:sections withRowAnimation:animation];
     [self reloadEmptyImageView];
 }
 
-- (void)r_insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation
-{
+- (void)r_insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
     [self r_insertRowsAtIndexPaths:indexPaths withRowAnimation:animation];
     [self reloadEmptyImageView];
 }
 
-//delete
-- (void)r_deleteSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation
-{
+// delete
+- (void)r_deleteSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation {
     [self r_deleteSections:sections withRowAnimation:animation];
     [self reloadEmptyImageView];
 }
 
-- (void)r_deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation
-{
+- (void)r_deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation {
     [self r_deleteRowsAtIndexPaths:indexPaths withRowAnimation:animation];
     [self reloadEmptyImageView];
 }
 
-- (void)r_reloadSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation
-{
+- (void)r_reloadSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation {
     [self r_reloadSections:sections withRowAnimation:animation];
     [self reloadEmptyImageView];
 }

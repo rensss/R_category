@@ -12,50 +12,30 @@
 @implementation NSString (R_Category)
 
 /**
- *  去除字符串两端的空白和换行
- *
- *  @return 去除空白和换行后的字符串
+ 去除字符串两端的空白和换行
+ @return 去除空白和换行后的字符串
  */
-- (NSString *)stringByTrimmingCharactersInSet
-{
-    //去除 字符串两端的空格
-    NSString *temp = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    //去除 字符串两端的空格 和回车
-    temp = [temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    temp = [temp stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    
-    temp = [temp stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-    
+- (NSString *)stringByTrimmingCharactersInSet {
+    //去除 字符串两端的空格 和 回车
+    NSString *temp = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     return temp;
 }
 
 /**
- *  去除字符串 两端空白 和所有的换行
- *
- *  @return NSString
+ 去除字符串 两端空白 和所有的换行
+ @return NSString
  */
-- (NSString *)stringByTrimmingWhitespaceAndAllNewLine
-{
-    //去除 字符串两端的空格
-    NSString *temp = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    //去除 字符串两端的空格 和回车
-    temp = [temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    temp = [temp stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    
-    temp = [temp stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-    
+- (NSString *)stringByTrimmingWhitespaceAndAllNewLine {
+    NSArray *words = [self componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *temp = [words componentsJoinedByString:@""];
     return temp;
 }
 
 /**
- *  字符串首字母转拼音,返回大写拼音首字母
- *
- *  @return 字符串首字母拼音大写
+ 字符串首字母转拼音,返回大写拼音首字母
+ @return 字符串首字母拼音大写
  */
-- (NSString *)stringToFirstCharactor
-{
+- (NSString *)stringToFirstCharactor {
     NSString *charactor = @"#";
     
     NSMutableString *source = [NSMutableString stringWithString:self];
@@ -68,11 +48,11 @@
         if (ch >= 'a' && ch <= 'z') {
             charactor = [NSString stringWithFormat:@"%c",ch - 32];
             return charactor;
-        }else{
+        } else {
             charactor = [NSString stringWithFormat:@"%c",ch];
             return charactor;
         }
-    }else{
+    } else {
         return charactor;
     }
     
@@ -80,12 +60,10 @@
 }
 
 /**
- *  验证字符串是否是邮箱格式
- *
- *  @return BOOL
+ 验证字符串是否是邮箱格式
+ @return BOOL
  */
-- (BOOL)isEmail
-{
+- (BOOL)isEmail {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     
@@ -93,12 +71,10 @@
 }
 
 /**
- *  验证字符串是否是手机号码
- *
- *  @return BOOL
+ 验证字符串是否是手机号码
+ @return BOOL
  */
-- (BOOL)isMobile
-{
+- (BOOL)isMobile {
     NSString *mobilePredicate = @"^1(3[0-9]|4[57]|5[0-35-9]|7[0135678]|8[0-9])\\d{8}$";
     NSPredicate *mobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobilePredicate];
     
@@ -106,13 +82,10 @@
 }
 
 /**
- *  验证是字符串是否是URL格式
- *
- *  @return BOOL
+ 验证是字符串是否是URL格式
+ @return BOOL
  */
-- (BOOL)isURL
-{
-    
+- (BOOL)isURL {
     NSString *regex = @"^(http://|https://)?((?:[A-Za-z0-9]+-[A-Za-z0-9]+|[A-Za-z0-9]+)\\.)+([A-Za-z]+)[/\?\\:]?.*$";
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
@@ -139,19 +112,21 @@
 }
 
 #pragma mark -计算文字高度
-
-- (CGSize)sizeWithMaxSize:(CGSize) maxSize andFont:(UIFont *) font
-{
+/**
+ 根据尺寸求文字高低
+ @param maxSize 最大尺寸(限高/限宽)
+ @param font 字体
+ @return 尺寸
+ */
+- (CGSize)sizeWithMaxSize:(CGSize)maxSize andFont:(UIFont *)font {
     return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
 }
 
 /**
- *  匹配字符串中得链接  并返回链接字符串数组
- *
- *  @return 返回一个标准url格式的数组
+ 匹配字符串中得链接  并返回链接字符串数组
+ @return 返回一个标准url格式的数组
  */
--(NSArray *)matchLinks
-{
+- (NSArray *)matchLinks {
     //匹配链接
     NSError *error;
     NSString *regulaStr = @"(http|ftp|https)://[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?";
@@ -162,8 +137,7 @@
     
     //存放匹配到的 链接字符串
     NSMutableArray *urls = [NSMutableArray array];
-    for (NSTextCheckingResult *match in arrayOfAllMatches)
-    {
+    for (NSTextCheckingResult *match in arrayOfAllMatches) {
         NSString* substringForMatch = [self substringWithRange:match.range];
         [urls addObject:substringForMatch];
     }
@@ -176,8 +150,7 @@
  *
  *  @return 间隔
  */
--(NSString *)formatterDateString;
-{
+- (NSString *)formatterDateString; {
     if (!self) {
         return @"刚刚";
     }
@@ -223,15 +196,12 @@
     if (dateComponents.minute != currentComponents.minute) {
         return [NSString stringWithFormat:@"%ld分钟前",(long)currentComponents.minute-dateComponents.minute];
     }
-    
     return @"刚刚";
 }
 
 #pragma mark - 身份证号码验证
-
 /**
  验证生份证号码是否符合规则
- 
  @return yes or no
  */
 - (BOOL)judgeIdentityStringValid {
@@ -244,16 +214,14 @@
     if(![identityStringPredicate evaluateWithObject:self]) return NO;
     
     //** 开始进行校验 *//
-    
     //将前17位加权因子保存在数组里
     NSArray *idCardWiArray = @[@"7", @"9", @"10", @"5", @"8", @"4", @"2", @"1", @"6", @"3", @"7", @"9", @"10", @"5", @"8", @"4", @"2"];
-    
     //这是除以11后，可能产生的11位余数、验证码，也保存成数组
     NSArray *idCardYArray = @[@"1", @"0", @"10", @"9", @"8", @"7", @"6", @"5", @"4", @"3", @"2"];
     
     //用来保存前17位各自乘以加权因子后的总和
     NSInteger idCardWiSum = 0;
-    for(int i = 0;i < 17;i++) {
+    for ( int i = 0;i < 17;i++ ) {
         NSInteger subStrIndex = [[self substringWithRange:NSMakeRange(i, 1)] integerValue];
         NSInteger idCardWiIndex = [[idCardWiArray objectAtIndex:i] integerValue];
         idCardWiSum+= subStrIndex * idCardWiIndex;
@@ -264,13 +232,13 @@
     //得到最后一位身份证号码
     NSString *idCardLast= [self substringWithRange:NSMakeRange(17, 1)];
     //如果等于2，则说明校验码是10，身份证号码最后一位应该是X
-    if(idCardMod == 2) {
+    if (idCardMod == 2) {
         if(![idCardLast isEqualToString:@"X"]||[idCardLast isEqualToString:@"x"]) {
             return NO;
         }
-    }else{
+    } else {
         //用计算出的验证码与最后一位身份证号码匹配，如果一致，说明通过，否则是无效的身份证号码
-        if(![idCardLast isEqualToString: [idCardYArray objectAtIndex:idCardMod]]) {
+        if (![idCardLast isEqualToString: [idCardYArray objectAtIndex:idCardMod]]) {
             return NO;
         }
     }
@@ -283,8 +251,7 @@
  @param date 一个时间
  @return 字符串
  */
-- (NSString *)relativeDateStringForDate:(NSDate *)date
-{
+- (NSString *)relativeDateStringForDate:(NSDate *)date {
     NSCalendarUnit units = NSCalendarUnitDay | NSCalendarUnitWeekOfYear |
     NSCalendarUnitMonth | NSCalendarUnitYear;
     

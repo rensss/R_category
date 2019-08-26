@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIAlertController (R_Category)
-@property (nonatomic,strong) UIColor *tintColor; /**< 统一按钮样式 不写系统默认的蓝色 */
-@property (nonatomic,strong) UIColor *titleColor; /**< 标题的颜色 */
-@property (nonatomic,strong) UIColor *messageColor; /**< 信息的颜色 */
+@property (nonatomic, strong) UIColor *tintColor; /**< 统一按钮样式 不写系统默认的蓝色 */
+@property (nonatomic, strong) UIColor *titleColor; /**< 标题的颜色 */
+@property (nonatomic, strong) UIColor *messageColor; /**< 信息的颜色 */
 
 /**
  根据otherActionTitles数组创建UIAlertController
@@ -23,7 +23,7 @@
  @param handle 点击回调 -1 取消Action点击 0~n 其他Action点击
  @return UIAlertController
  */
-+(instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message cancelActionTitle:(NSString *)cancelActionTitle otherActionTitles:(NSArray<NSString *> *)otherActionTitles handle:(void (^)(NSInteger index))handle;
++ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message cancelActionTitle:(NSString *)cancelActionTitle otherActionTitles:(NSArray<NSString *> *)otherActionTitles handle:(void (^)(NSInteger index))handle;
 
 @end
 

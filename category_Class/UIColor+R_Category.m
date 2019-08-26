@@ -24,12 +24,20 @@
 
 /**
  *  根据十六进制字符串生成一个UIColor
- *
  *  @param hexString 十六进制字符串
- *
  *  @return UIColor
  */
 + (UIColor *)colorWithHexString:(NSString *)hexString {
+    return [UIColor colorWithHexString:hexString withAlpha:1.0f];
+}
+
+/**
+ *  根据十六进制字符串生成一个UIColor
+ *  @param hexString 十六进制字符串
+ *  @param alpha a value from 0.0 to 1.0. 零到一
+ *  @return UIColor
+ */
++ (UIColor *)colorWithHexString:(NSString *)hexString withAlpha:(CGFloat)alpha {
     if ([hexString length] <6){//长度不合法
         return [UIColor blackColor];
     }
@@ -59,7 +67,7 @@
     return [UIColor colorWithRed:((float) r /255.0f)
                            green:((float) g /255.0f)
                             blue:((float) b /255.0f)
-                           alpha:1.0f];
+                           alpha:alpha];
 }
 
 /**

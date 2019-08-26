@@ -19,8 +19,14 @@
 - (void)setImageAndTitleLabelVertical;
 
 /**
- button 图片在title 右边
+ button 图片在title 右边 间距默认 5
  */
 - (void)setImageToRight;
+
+/**
+ 左图右文
+ @param padding 间距
+ */
+- (void)setImageToRightWithPadding:(CGFloat)padding;
 
 @end

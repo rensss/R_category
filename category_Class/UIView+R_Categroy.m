@@ -114,7 +114,7 @@
  @param duration 一圈时长
  @param clockwise 是否顺时针
  */
-- (void)startRotating:(double)duration :(BOOL)clockwise {
+- (void)startRotating:(double)duration withClockwise:(BOOL)clockwise {
     NSString *kRotatingAnimationKey = @"kRotatingAnimationKey";
     
     CGFloat currentState = 0;
@@ -130,7 +130,6 @@
     path.fromValue = @(currentState);
     path.byValue = @(clockwise ? M_PI*2 : -M_PI*2);
     [self.layer addAnimation:path forKey:kRotatingAnimationKey];
-    
 }
 
 /**
@@ -152,7 +151,6 @@
     
     // Leave self as it was when stopped.
     self.layer.transform = CATransform3DMakeRotation(currentState, 0, 0, 1);
-    
 }
 
 @end

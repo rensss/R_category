@@ -32,27 +32,27 @@ static void *imgStringKey = &imgStringKey;
     NSRegularExpression *regx = [[NSRegularExpression alloc] initWithPattern:@"\\{[^}]+\\}" options:NSRegularExpressionCaseInsensitive error:nil];
     NSArray *matchs = [regx matchesInString:str options:NSMatchingReportCompletion range:NSMakeRange(0, str.length)];
     
-    //富文本
+    // 富文本
     NSMutableAttributedString *atrributeString = [[NSMutableAttributedString alloc] initWithString:str];
     
-    //倒序替换range
+    // 倒序替换range
     for (NSInteger i = [matchs count] - 1; i >= 0; i--) {
         NSTextCheckingResult *match = matchs[i];
         
-        //大括号所在的位置
+        // 大括号所在的位置
         NSRange range = [match range];
-        //替换大括号
+        // 替换大括号
         [atrributeString replaceCharactersInRange:NSMakeRange(range.location, 1) withString:@" "];
         
         [atrributeString replaceCharactersInRange:NSMakeRange(range.location + range.length - 1, 1) withString:@" "];
         
-        //创建图片Attachment
+        // 创建图片Attachment
         NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
         NSString *imageName = [str substringWithRange:NSMakeRange(range.location + 1, range.length - 2)];
         attachment.image = [UIImage imageNamed:imageName];
         attachment.bounds = CGRectMake(0, 0, self.font.lineHeight, self.font.lineHeight);
         
-        //添加图片Attachment
+        // 添加图片Attachment
         NSAttributedString *text = [NSAttributedString attributedStringWithAttachment:attachment];
         [atrributeString replaceCharactersInRange:range withAttributedString:text];
     }

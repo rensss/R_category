@@ -40,7 +40,7 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
     return CGRectContainsPoint(hitFrame, point);
 }
 
-- (void)setImageAndTitleLabelVertical{
+- (void)setImageAndTitleLabelVertical {
     
     if (!self.titleLabel.text || self.titleLabel.text.length == 0 || !self.imageView.image) {
         return;
@@ -58,8 +58,11 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
     self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageSize.width, - (totalHeight - titleSize.height), 0);
 }
 
-- (void)setImageToRight
-{
+/**
+ 左图又文
+ @param padding 间距
+ */
+- (void)setImageToRightWithPadding:(CGFloat)padding {
     CGSize imageSize = self.imageView.frame.size;
     CGSize titleSize = self.titleLabel.frame.size;
     CGSize textSize = [self.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.titleLabel.font}];
@@ -67,8 +70,15 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
     if (titleSize.width + 0.5 < frameSize.width) {
         titleSize.width = frameSize.width;
     }
-    self.imageEdgeInsets = UIEdgeInsetsMake(0.0, titleSize.width+2.5, 0.0, -titleSize.width-2.5);
-    self.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width-2.5, 0.0, imageSize.width+2.5);
+    self.imageEdgeInsets = UIEdgeInsetsMake(0.0, titleSize.width+padding/2, 0.0, -titleSize.width-padding/2);
+    self.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width-padding/2, 0.0, imageSize.width+padding/2);
+}
+
+/**
+ button 图片在title 右边 间距默认 5
+ */
+- (void)setImageToRight {
+    [self setImageToRightWithPadding:5.0f];
 }
 
 @end
