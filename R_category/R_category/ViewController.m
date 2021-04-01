@@ -21,7 +21,7 @@
     UIImageView *image = [[UIImageView alloc] initWithFrame:self.view.bounds];
     image.hidden = YES;
     image.tag = 1000;
-    image.image = [UIImage getTheLaunchImage];
+//    image.image = [UIImage getTheLaunchImage];
     [self.view addSubview:image];
     
     UIView *newView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
