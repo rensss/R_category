@@ -1,5 +1,5 @@
 
-![rensss's GitHub stats](https://github-readme-stats.vercel.app/api?username=rensss&hide=contribs,prs)
+![rensss's GitHub stats](https://github-readme-stats.vercel.app/api?username=rensss)
 
 
 # R_category
